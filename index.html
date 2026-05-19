@@ -1,0 +1,334 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>allapkdownladapps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#050816;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    .bg{
+      position:fixed;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+      z-index:-1;
+      overflow:hidden;
+    }
+
+    .circle{
+      position:absolute;
+      border-radius:50%;
+      background:rgba(0,255,255,0.08);
+      animation:float 10s infinite linear;
+    }
+
+    .circle:nth-child(1){
+      width:220px;
+      height:220px;
+      top:10%;
+      left:5%;
+    }
+
+    .circle:nth-child(2){
+      width:300px;
+      height:300px;
+      bottom:10%;
+      right:5%;
+      animation-duration:14s;
+    }
+
+    @keyframes float{
+      0%{transform:translateY(0) rotate(0deg);}
+      50%{transform:translateY(-30px) rotate(180deg);}
+      100%{transform:translateY(0) rotate(360deg);}
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 10%;
+      position:sticky;
+      top:0;
+      background:rgba(5,8,22,0.9);
+      backdrop-filter:blur(10px);
+      z-index:1000;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:700;
+      color:cyan;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:cyan;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:60px;
+      margin-bottom:20px;
+      background:linear-gradient(to right,cyan,#7d5fff);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .hero p{
+      color:#ccc;
+      max-width:700px;
+      margin:auto;
+      line-height:1.8;
+    }
+
+    .btns{
+      margin-top:30px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 28px;
+      border-radius:50px;
+      text-decoration:none;
+      margin:10px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .primary{
+      background:cyan;
+      color:black;
+      box-shadow:0 0 20px cyan;
+    }
+
+    .primary:hover{
+      transform:scale(1.05);
+    }
+
+    .secondary{
+      border:2px solid cyan;
+      color:cyan;
+    }
+
+    .secondary:hover{
+      background:cyan;
+      color:black;
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    .title{
+      text-align:center;
+      font-size:40px;
+      color:cyan;
+      margin-bottom:50px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      padding:25px;
+      border-radius:20px;
+      transition:0.4s;
+      backdrop-filter:blur(10px);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 25px rgba(0,255,255,0.3);
+    }
+
+    .card h3{
+      color:cyan;
+      margin-bottom:15px;
+    }
+
+    .card p{
+      color:#ccc;
+      line-height:1.7;
+      font-size:14px;
+    }
+
+    .card a{
+      display:inline-block;
+      margin-top:15px;
+      color:cyan;
+      text-decoration:none;
+    }
+
+    footer{
+      text-align:center;
+      padding:40px 20px;
+      border-top:1px solid rgba(255,255,255,0.08);
+      color:#aaa;
+    }
+
+    .socials a{
+      color:cyan;
+      margin:0 10px;
+      text-decoration:none;
+    }
+
+    @media(max-width:768px){
+      .hero h1{
+        font-size:38px;
+      }
+
+      nav{
+        display:none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg">
+  <div class="circle"></div>
+  <div class="circle"></div>
+</div>
+
+<header>
+  <div class="logo">allapkdownladapps</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#tools">AI Tools</a>
+    <a href="#blog">Blogs</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <h1>Premium APK & AI Tools Website</h1>
+
+    <p>
+      Discover trending APK apps, AI tools, tech tricks, editing apps,
+      and premium utilities in one stylish modern platform.
+    </p>
+
+    <div class="btns">
+      <a href="#tools" class="btn primary">Explore Tools</a>
+      <a href="#blog" class="btn secondary">Latest Blogs</a>
+    </div>
+  </div>
+</section>
+
+<section id="tools">
+  <h2 class="title">Popular AI Tools</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>ChatGPT</h3>
+      <p>AI chatbot for coding, writing, study help and smart conversations.</p>
+      <a href="#">Open Tool →</a>
+    </div>
+
+    <div class="card">
+      <h3>Canva AI</h3>
+      <p>Create thumbnails, posters, banners and premium social media graphics.</p>
+      <a href="#">Open Tool →</a>
+    </div>
+
+    <div class="card">
+      <h3>CapCut AI</h3>
+      <p>Advanced AI video editing for shorts, reels and YouTube videos.</p>
+      <a href="#">Open Tool →</a>
+    </div>
+
+    <div class="card">
+      <h3>Remove BG</h3>
+      <p>Instantly remove image backgrounds using smart AI technology.</p>
+      <a href="#">Open Tool →</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="blog">
+  <h2 class="title">Latest Blogs</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Best AI Tools in 2026</h3>
+      <p>Top AI tools everyone is using for productivity and content creation.</p>
+      <a href="#">Read More →</a>
+    </div>
+
+    <div class="card">
+      <h3>Top Android APK Apps</h3>
+      <p>Trending APK apps for gaming, editing and entertainment lovers.</p>
+      <a href="#">Read More →</a>
+    </div>
+
+    <div class="card">
+      <h3>Low-End PC Tricks</h3>
+      <p>Boost your old PC performance with simple optimization tips.</p>
+      <a href="#">Read More →</a>
+    </div>
+
+  </div>
+</section>
+
+<footer id="contact">
+  <h2>allapkdownladapps</h2>
+  <p>Premium APK Apps • AI Tools • Tech Blogs</p>
+
+  <div class="socials">
+    <a href="#">Telegram</a>
+    <a href="#">Instagram</a>
+  </div>
+
+  <p style="margin-top:20px;">© 2026 allapkdownladapps. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+```
